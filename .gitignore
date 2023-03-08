@@ -1,0 +1,58 @@
+build
+abcdCmake.in
+docs/doxy/*
+*.log
+\.*
+!.gitignore
+!.gitmodules
+example/*
+!example/example.cpp
+!example/example.c
+!example/CMakeLists.txt
+!example/e05*
+*.kdev4
+python/*
+!python/example.py
+!python/CMakeLists.txt
+!python/numpy
+!python/python_interface.cpp
+Makefile
+lib/libpatoh.a
+include/patoh.h
+doc/source/xml/*
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#CMAKE
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+install_manifest.txt
+
+#emacs
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+auto-save-list
+tramp
+.\#*

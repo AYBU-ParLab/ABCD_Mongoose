@@ -1,0 +1,66 @@
+# Uncomment if you installed boost manually (should contain 
+# folders lib/ include/)
+#set(BOOST_ROOT $ENV{BOOST_ROOT})
+
+set(CMAKE_CXX_COMPILER mpiicpc)
+set(CMAKE_C_COMPILER mpiicc)
+set(CMAKE_FC_COMPILER mpiifort)
+set(CMAKE_OPENMP_FLAG -qopenmp)
+
+set(BLAS_LAPACK_SCALAPACK_DIRS $ENV{MKLPATH})
+set(BLAS_LAPACK_SCALAPACK_LIBS
+        mkl_scalapack_lp64
+        mkl_intel_lp64
+        mkl_intel_thread
+        mkl_core
+        mkl_blacs_intelmpi_lp64
+    )
+
+# Put here the location of mpi libraries and headers
+set(MPI_LIB_DIR /path/to/openmpi/lib/)
+set(MPI_INC_DIR /path/to/openmpi/include/)
+set(MPI_LIBRARIES
+    mpi
+    mpifort
+    mpicxx
+)
+
+set(INC_DIRS
+    /path/to/MUMPS/include
+  # Dependencies of MUMPS (if needed)
+  ##such as scotch, if you compiled mumps with -Dscotch etc.
+        /path/to/metis/include
+        /path/to/parmetis/include
+        /path/to/scotch/include
+    /path/to/patoh/include/
+    /path/to/python/include/
+  #Put here other dependencies paths (hwloc, ...) when needed
+)
+set(LIB_DIRS
+    /path/to/MUMPS/lib
+  # Dependencies of MUMPS (if needed)
+    ##such as scotch, if you compiled mumps with -Dscotch etc.
+        /path/to/metis/lib
+        /path/to/parmetis/lib
+        /path/to/scotch/lib
+    /path/to/patoh/lib/
+  #Put here other dependencies paths (hwloc, ...) when needed
+)
+set(LIBS
+  ##if you used -Dscotch in mumps, uncomment the following
+    esmumps
+    scotch
+    scotcherr
+    scotcherrexit
+    ptesmumps
+    ptscotch
+    ptscotcherr
+    ptscotcherrexit
+  # idem for metis/parmetis
+    metis
+    parmetis
+  #others when needed
+    hwloc
+    pthread
+    z
+)
