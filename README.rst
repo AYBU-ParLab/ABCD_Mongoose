@@ -1,8 +1,8 @@
 ==============================================
-The Augmented Block Cimmino Distributed Solver v1.0
+The Augmented Block Cimmino Distributed Solver v1.1 with Mongoose
 ==============================================
 
-**Note:** Check http://abcd.enseeiht.fr for more details.
+**Note:** Check http://abcd.enseeiht.fr or https://bitbucket.org/apo_irit/abcd/ for more details.
 
 Tested plateforms
 -----------------
@@ -10,7 +10,7 @@ Tested plateforms
 Working
 =======
 
-* Linux x86_64 with GNU 4.7 and 4.8  compilers,``MKL``, ``ACML``, ``OpenBLA`` reference blas and lapack.
+* Linux x86_64 with GNU 4.7 and 4.8  compilers,``MKL``, ``ACML``, ``OpenBLAS`` reference blas and lapack.
 
 Not Working
 ===========
@@ -35,7 +35,7 @@ Not Tested
 Obtaining the source code
 -------------------------
 
-The ABCD Solver depends on a few external libraries: ``MUMPS``, ``Sparselib++ (custom)``, ``PaToH``, 
+The ABCD_Mongoose Solver depends on a few external libraries: ``Mongoose``,``METIS``,``MUMPS``, ``Sparselib++ (custom)``, ``PaToH``, 
 ``lapack``, ``Boost::MPI`` and ``Boost::Serialization`` version 1.50 or higher.
 
 * ``Sparselib++ (custom)``: a modified version of ``SparseLib++`` to
@@ -75,7 +75,7 @@ The installation can be done by typing the following commands in your terminal
     # download the latest stable version
     # it will create a directory named abcd
 
-    git clone https://bitbucket.org/apo_irit/abcd.git
+    git clone https://github.com/AYBU-ParLab/ABCD_Mongoose.git
 
     # download the appropriate version of patoh from
     # http://bmi.osu.edu/~umit/software.html
